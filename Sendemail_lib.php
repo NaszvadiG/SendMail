@@ -5,6 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * Envoie / gestion Email
  * @author Romain Maingre <contact@romainmaingre.fr>
  * @category Library
+ * @version 1.0.0
  */
 class Sendemail_lib
 {
