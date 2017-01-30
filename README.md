@@ -59,11 +59,11 @@ function initParamMail($defaultSubject, $sizeMessageMin, $ownersEmail = array())
  /**
   * Send Mail with captcha
   */
-  function sendMailCaptcha();
+  function sendEmailCaptcha();
 
  /**
   * Send Mail without captcha
   */
-  function sendMail();
+  function sendEmail();
 
 ```
