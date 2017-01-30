@@ -40,7 +40,7 @@ class MY_Controller extends CI_Controller
         $this->load->library('Sendemail_lib');
 
         $name       = 'John Doe';
-        $email      = john.doe@example.com;
+        $email      = 'john.doe@example.com';
         $msg        = 'Hello World';
         $subject    = 'Just a message';
         
