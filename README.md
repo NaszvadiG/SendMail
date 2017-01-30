@@ -21,7 +21,7 @@ define('IP_ADDRESS', isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 
 
 Edit file './application/config/constants.php'
 ```php
-defined('WEBSITE_NAME')         OR define('WEBSITE_NAME', 'romainmaingre.fr');
+defined('WEBSITE_NAME')         OR define('WEBSITE_NAME', 'mywebsite.com');
 defined('PRIVATE_KEY_CAPTCHA')  OR define('PRIVATE_KEY_CAPTCHA', '6WecUuhw5MWX4SAtvOLfawyY663RSzGTAAIuqz');
 ```
 
