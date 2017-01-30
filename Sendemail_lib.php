@@ -5,13 +5,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * Envoie / gestion Email
  * @author Romain Maingre <contact@romainmaingre.fr>
  * @category Library
- * @version 1.0.0
+ * @version 1.0.1
  */
 class Sendemail_lib
 {
     private $_urlReCaptcha = "https://www.google.com/recaptcha/api/siteverify";
 
-    private $_privateKey = "6LfawyYTAAAAAIuqw5MWX4SWecUuh663RSzGtvOz";
+    private $_privateKey = "";
 
     private $_sizeMessageMin = 0;
 
