@@ -52,11 +52,6 @@ For a contact formular
 function initParamMail($defaultSubject, $sizeMessageMin, $ownersEmail = array());
 
 /**
- * Initializes the default parameters
- */
-function initParamMail($defaultSubject, $sizeMessageMin, $ownersEmail = array('website' => 'mywebsite.com', 'contact' => 'support'));
-
-/**
  * Initializes the contents of the mail
  */
  function setEmail($from, $email, $message, $subject, $captcha = null);
