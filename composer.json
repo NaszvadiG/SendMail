@@ -1,7 +1,7 @@
 {
     "name": "rorocloud/sendmail",
     "keywords": ["mail", "codeigniter"],
-    "description": "Send Mail for CodeIgniter 3",
+    "description": "Library Send Mail for CodeIgniter 3",
     "homepage": "https://github.com/rorocloud/sendmail",
     "license": "Apache-2.0",
     "type": "codeigniter-third-party",
