@@ -27,21 +27,28 @@ defined('WEBSITE_NAME') OR define('WEBSITE_NAME', 'romainmaingre.fr');
 ### Step 3 Examples
 For a contact formular
 ```php
-  public function mySendMail() {
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class MY_Controller extends CI_Controller
+{
+    public function __construct() {
+        parent::__construct();
+
+        $this->load->add_package_path(APPPATH.'third_party/sendmail');
         $this->load->library('Sendemail_lib');
 
-        $name       = trim($this->input->post('contactName'));
-        $email      = trim($this->input->post('contactEmail'));
-        $msg        = trim($this->input->post('contactMessage'));
-        $subject    = trim($this->input->post('contactSubject'));
-        $captcha    = trim($this->input->post('g-recaptcha-response'));
-
-        $this->sendemail_lib->initParamMail('Contact by '.ucfirst($name), 15);
+        $name       = 'John Doe';
+        $email      = john.doe@example.com;
+        $msg        = 'Hello World';
+        $subject    = 'Just a message';
+        
         $result = $this->sendemail_lib->setEmail($name, $email, $msg, $subject, $captcha);
         if ($result['statut']) {
-            $result = $this->sendemail_lib->sendEmailCaptcha();
+            $result = $this->sendemail_lib->sendEmail();
         }
-    }
+}
 ```
 
 #### Help
