@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Envoie / gestion Email
- * @author Romain Maingre <contact@romainmaingre.fr>
+ * @author Romain Maingre <support@romainmaingre.fr>
  * @category Library
  * @version 1.0.0
  */
@@ -25,7 +25,7 @@ class Sendemail_lib
 
     /**
      * Constructeur
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      */
     public function __construct()
     {
@@ -35,7 +35,7 @@ class Sendemail_lib
 
     /**
      * Initialise les parametres par defaut
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $defaultSubject
      * @param int $sizeMessageMin
      * @param array $ownersEmail
@@ -54,7 +54,7 @@ class Sendemail_lib
 
     /**
      * Set les erreurs survenues
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $dataError
      * @param int $error
      */
@@ -66,7 +66,7 @@ class Sendemail_lib
 
     /**
      * Vérifie si l'addresse email est valide
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $mailAddress
      * @return bool
      */
@@ -79,7 +79,7 @@ class Sendemail_lib
 
     /**
      * Vérifie la longueur du message de l'expéditeur
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $message
      * @return bool
      */
@@ -90,6 +90,16 @@ class Sendemail_lib
         return true;
     }
 
+    /**
+     * Envoie un mail après vérification du Captcha
+     * @author Romain Maingre <support@romainmaingre.fr>
+     * @param string $from
+     * @param string $email
+     * @param string $message
+     * @param string $subject
+     * @param string $captcha
+     * @return array
+     */
     public function setEmail($from, $email, $message, $subject, $captcha = null) {
         try {
             if (!empty($captcha)) {
@@ -121,7 +131,7 @@ class Sendemail_lib
 
     /**
      * Envoie un mail après vérification du Captcha
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @return array
      */
     public function sendEmailCaptcha() {
@@ -152,8 +162,8 @@ class Sendemail_lib
     }
 
     /**
-     * Envoie un mail après vérification du Captcha
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * Envoie un mail
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @return array
      */
     public function sendEmail() {
