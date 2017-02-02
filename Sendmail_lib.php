@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Envoie / gestion Mail
- * @author Romain Maingre <contact@romainmaingre.fr>
+ * @author Romain Maingre <support@romainmaingre.fr>
  * @category Library
  * @version 1.0.0
  */
@@ -55,7 +55,7 @@ class Sendmail_lib
 
     /**
      * Change le mail de reception
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @version 1.0.0
      * @param $mail
      */
@@ -106,7 +106,7 @@ class Sendmail_lib
 
     /**
      * Initialise le mail avant envoie
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @version 1.0.0
      * @param string $from
      * @param string $mail
