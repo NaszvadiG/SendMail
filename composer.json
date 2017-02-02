@@ -1,9 +1,10 @@
 {
     "name": "rorocloud/sendmail",
+    "version": "1.0.0",
     "keywords": ["mail", "captcha", "codeigniter"],
     "description": "Library Send Mail for CodeIgniter 3",
     "homepage": "https://github.com/rorocloud/sendmail",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "type": "codeigniter-third-party",
     "authors": [
         {

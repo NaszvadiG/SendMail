@@ -2,8 +2,13 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
+<<<<<<< HEAD:Sendmail_lib.php
  * Envoie / gestion Mail
  * @author Romain Maingre <contact@romainmaingre.fr>
+=======
+ * Envoie / gestion Email
+ * @author Romain Maingre <support@romainmaingre.fr>
+>>>>>>> origin/master:Sendemail_lib.php
  * @category Library
  * @version 1.0.0
  */
@@ -25,7 +30,7 @@ class Sendmail_lib
 
     /**
      * Constructeur
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      */
     public function __construct()
     {
@@ -35,7 +40,7 @@ class Sendmail_lib
 
     /**
      * Initialise les parametres par defaut
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $defaultSubject
      * @param int $sizeMessageMin
      * @param array $ownersMail
@@ -63,7 +68,7 @@ class Sendmail_lib
 
     /**
      * Set les erreurs survenues
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $dataError
      * @param int $error
      */
@@ -74,8 +79,13 @@ class Sendmail_lib
     }
 
     /**
+<<<<<<< HEAD:Sendmail_lib.php
      * Vérifie si l'addresse mail est valide
      * @author Romain Maingre <contact@romainmaingre.fr>
+=======
+     * Vérifie si l'addresse email est valide
+     * @author Romain Maingre <support@romainmaingre.fr>
+>>>>>>> origin/master:Sendemail_lib.php
      * @param string $mailAddress
      * @return bool
      */
@@ -88,7 +98,7 @@ class Sendmail_lib
 
     /**
      * Vérifie la longueur du message de l'expéditeur
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @param string $message
      * @return bool
      */
@@ -100,6 +110,7 @@ class Sendmail_lib
     }
 
     /**
+<<<<<<< HEAD:Sendmail_lib.php
      * Initialise le mail avant envoie
      * @author Romain Maingre <contact@romainmaingre.fr>
      * @param string $from
@@ -111,6 +122,18 @@ class Sendmail_lib
      * @return array
      */
     public function setMail($from, $mail, $message, $subject, $captcha = null, $html = false) {
+=======
+     * Envoie un mail après vérification du Captcha
+     * @author Romain Maingre <support@romainmaingre.fr>
+     * @param string $from
+     * @param string $email
+     * @param string $message
+     * @param string $subject
+     * @param string $captcha
+     * @return array
+     */
+    public function setEmail($from, $email, $message, $subject, $captcha = null) {
+>>>>>>> origin/master:Sendemail_lib.php
         try {
             if (!empty($captcha)) {
                 $this->_mailContent['captcha'] = $captcha;
@@ -140,7 +163,7 @@ class Sendmail_lib
 
     /**
      * Envoie un mail après vérification du Captcha
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @return array
      */
     public function sendMailCaptcha() {
@@ -171,8 +194,8 @@ class Sendmail_lib
     }
 
     /**
-     * Envoie un mail après vérification du Captcha
-     * @author Romain Maingre <contact@romainmaingre.fr>
+     * Envoie un mail
+     * @author Romain Maingre <support@romainmaingre.fr>
      * @return array
      */
     public function sendMail() {
@@ -190,5 +213,10 @@ class Sendmail_lib
     }
 }
 
+<<<<<<< HEAD:Sendmail_lib.php
 /* End of file Sendmail_lib.php */
 /* Location: ./application/libraries/Sendmail_lib.php */
+=======
+/* End of file Sendemail_lib.php */
+/* Location: ./application/libraries/Sendemail_lib.php */
+>>>>>>> origin/master:Sendemail_lib.php
