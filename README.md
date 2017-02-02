@@ -1,5 +1,5 @@
 # SendMail
-Library Send Email for Codeigniter 3
+Library Send Mail for Codeigniter 3
 
 ## Requirements
 
@@ -38,16 +38,16 @@ class MY_Controller extends CI_Controller
         parent::__construct();
 
         $this->load->add_package_path(APPPATH.'third_party/sendmail');
-        $this->load->library('Sendemail_lib');
+        $this->load->library('Sendmail_lib');
 
         $name       = 'John Doe';
-        $email      = 'john.doe@example.com';
+        $mail	    = 'john.doe@example.com';
         $msg        = 'Hello World';
         $subject    = 'Just a message';
         
-        $result = $this->sendemail_lib->setEmail($name, $email, $msg, $subject, $captcha);
+        $result = $this->sendemail_lib->setMail($name, $email, $msg, $subject, $captcha);
         if ($result['statut']) {
-            $result = $this->sendemail_lib->sendEmail();
+            $result = $this->sendemail_lib->sendMail();
         }
 }
 ```
@@ -57,21 +57,26 @@ class MY_Controller extends CI_Controller
 /**
  * Initializes the default parameters
  */
-function initParamMail($defaultSubject, $sizeMessageMin, $ownersEmail = array());
+function initParamMail($defaultSubject, $sizeMessageMin, $ownersMail = array());
+
+/**
+ * Change owners mail
+ */
+function changeOwnersMail($mail);
 
 /**
  * Initializes the contents of the mail
  */
- function setEmail($from, $email, $message, $subject, $captcha = null);
+ function setMail($from, $mail, $message, $subject, $captcha = null, $html = false);
  
  /**
   * Send Mail with captcha
   */
-  function sendEmailCaptcha();
+  function sendMailCaptcha();
 
  /**
   * Send Mail without captcha
   */
-  function sendEmail();
+  function sendMail();
 
 ```
